@@ -19,7 +19,7 @@ const CreateBlog = () => {
       return;
     }
 
-    fetch(`${import.meta.env.VITE_API_URL}/blogs/create`, {
+    fetch(`${import.meta.env.VITE_API_URL}/posts/create`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

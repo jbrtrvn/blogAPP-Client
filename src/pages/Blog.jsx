@@ -18,7 +18,7 @@ const Blog = () => {
   const { isLoggedIn, user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/blogs/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/posts/${id}`)
       .then(response => response.json())
       .then(data => {
         if (data.title && data.content) {
@@ -31,7 +31,7 @@ const Blog = () => {
       })
       .catch(error => Swal.fire('Error', 'Error fetching blog', 'error'));
 
-    fetch(`${import.meta.env.VITE_API_URL}/blogs/${id}/comments`)
+    fetch(`${import.meta.env.VITE_API_URL}/posts/${id}/comments`)
       .then(response => response.json())
       .then(data => setComments(data.comments || []))
       .catch(error => Swal.fire('Error', 'Error fetching comments', 'error'));
@@ -45,7 +45,7 @@ const Blog = () => {
       return;
     }
 
-    fetch(`${import.meta.env.VITE_API_URL}/blogs/${id}/addComment`, {
+    fetch(`${import.meta.env.VITE_API_URL}/posts/${id}/addComment`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const Blog = () => {
       return;
     }
 
-    fetch(`${import.meta.env.VITE_API_URL}/blogs/comments/${commentId}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/posts/comments/${commentId}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('authToken')}`
@@ -96,7 +96,7 @@ const Blog = () => {
       return;
     }
 
-    fetch(`${import.meta.env.VITE_API_URL}/blogs/update/${id}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/posts/update/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ const Blog = () => {
   };
 
   const handleDeleteBlog = () => {
-    fetch(`${import.meta.env.VITE_API_URL}/blogs/delete/${id}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/posts/delete/${id}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('authToken')}`

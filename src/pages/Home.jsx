@@ -7,7 +7,7 @@ const Home = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/blogs`)
+    fetch(`${import.meta.env.VITE_API_URL}/posts`)
       .then((response) => response.json())
       .then((data) => setBlogs(data.blogs || []))
       .catch((error) => {
