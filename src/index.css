@@ -1,0 +1,266 @@
+/* Navbar Styles */
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+.navbar .nav-link {
+  padding: 10px 15px;
+}
+
+.navbar .navbar-toggler {
+  border: none;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,...");
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Blog List */
+.blog-list {
+  padding: 20px;
+}
+
+.blog-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-item {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-item h2 {
+  margin: 0;
+}
+
+.blog-item p {
+  font-size: 0.9rem;
+}
+
+/* Blog Detail */
+.blog-detail {
+  padding: 20px;
+}
+
+.blog-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #888;
+  font-size: 0.875rem;
+}
+
+
+.blog-time {
+  color: #888;
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+/* Comment Section */
+.comment-section {
+  padding: 20px;
+}
+
+.comment-container {
+  padding: 20px;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-item {
+  background: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comment-item p {
+  margin: 0;
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-time {
+  color: #888;
+  font-size: 0.875rem;
+  margin-left: 5px; /* Adjust margin to move time closer to the comment */
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* General Button Styling */
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.875rem; /* Consistent font size */
+}
+
+button:hover {
+  opacity: 0.9; /* Add slight hover effect */
+}
+
+button.submit-button {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: 1px solid #007bff;
+  border-radius: 10px;
+}
+
+button.submit-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3; /* Match border with background */
+}
+
+/* Delete Button Styling */
+button.delete {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  margin-right: 1rem;
+  border: 1px solid #ff0000;
+}
+
+button.delete:hover {
+  background-color: #c82333;
+  color: white;
+}
+
+/* Edit Button Styling */
+button.edit {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  margin-right: 1rem;
+  border: 1px solid #04AA6D;
+}
+
+button.edit:hover {
+  background-color: #218838;
+  color: white;
+}
+
+/* Comments List */
+.comments-list {
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .navbar .nav-link {
+    padding: 8px;
+  }
+
+  textarea, input {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 0.875rem;
+  }
+
+  textarea, input {
+    padding: 6px;
+  }
+
+  button {
+    padding: 6px 12px;
+  }
+}
+
+/* Back Button */
+.back-button {
+  position: relative;
+  top: -10px;
+  right: 70px;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.back-button:hover {
+  background-color: #4b4b4b;
+}
