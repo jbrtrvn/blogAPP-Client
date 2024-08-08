@@ -14,184 +14,25 @@
 
 .navbar .navbar-toggler {
   border: none;
+  background-color: transparent; /* Ensure background is transparent for the toggler */
 }
 
 .navbar .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,...");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='white' d='M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z'/%3e%3c/svg%3e");
+  background-color: transparent; /* Transparent background to avoid overlap */
+  background-repeat: no-repeat;
+  background-size: 24px 24px; 
+  width: 30px; 
+  height: 30px; 
 }
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+/* Handle responsiveness */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: left; /* Typical behavior for navigation links */
+  }
 }
 
-/* Blog List */
-.blog-list {
-  padding: 20px;
-}
-
-.blog-items {
-  display: flex;
-  flex-direction: column;
-}
-
-.blog-item {
-  background: #ffffff;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.blog-item h2 {
-  margin: 0;
-}
-
-.blog-item p {
-  font-size: 0.9rem;
-}
-
-/* Blog Detail */
-.blog-detail {
-  padding: 20px;
-}
-
-.blog-content {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.blog-meta {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  color: #888;
-  font-size: 0.875rem;
-}
-
-
-.blog-time {
-  color: #888;
-  font-size: 0.875rem;
-  text-align: right;
-}
-
-/* Comment Section */
-.comment-section {
-  padding: 20px;
-}
-
-.comment-container {
-  padding: 20px;
-}
-
-.comment-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.comment-item {
-  background: #f8f9fa;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.comment-item p {
-  margin: 0;
-}
-
-.comment-author {
-  font-weight: bold;
-}
-
-.comment-time {
-  color: #888;
-  font-size: 0.875rem;
-  margin-left: 5px; /* Adjust margin to move time closer to the comment */
-}
-
-textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-}
-
-/* General Button Styling */
-button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.875rem; /* Consistent font size */
-}
-
-button:hover {
-  opacity: 0.9; /* Add slight hover effect */
-}
-
-button.submit-button {
-  background-color: #007bff; /* Blue color */
-  color: white;
-  border: 1px solid #007bff;
-  border-radius: 10px;
-}
-
-button.submit-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  border-color: #0056b3; /* Match border with background */
-}
-
-/* Delete Button Styling */
-button.delete {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
-  margin-right: 1rem;
-  border: 1px solid #ff0000;
-}
-
-button.delete:hover {
-  background-color: #c82333;
-  color: white;
-}
-
-/* Edit Button Styling */
-button.edit {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
-  margin-right: 1rem;
-  border: 1px solid #04AA6D;
-}
-
-button.edit:hover {
-  background-color: #218838;
-  color: white;
-}
-
-/* Comments List */
-.comments-list {
-  margin-top: 20px;
-}
-
-/* Responsive Design */
 @media (max-width: 1024px) {
   .container {
     width: 95%;
@@ -247,7 +88,163 @@ button.edit:hover {
   }
 }
 
-/* Back Button */
+/* Other Styles - Keep as is */
+.blog-list {
+  padding: 20px;
+}
+
+.blog-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-item {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-item h2 {
+  margin: 0;
+}
+
+.blog-item p {
+  font-size: 0.9rem;
+}
+
+.blog-detail {
+  padding: 20px;
+}
+
+.blog-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #888;
+  font-size: 0.875rem;
+}
+
+.blog-time {
+  color: #888;
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+.comment-section {
+  padding: 20px;
+}
+
+.comment-container {
+  padding: 20px;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-item {
+  background: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comment-item p {
+  margin: 0;
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-time {
+  color: #888;
+  font-size: 0.875rem;
+  margin-left: 5px; /* Adjust margin to move time closer to the comment */
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.875rem; /* Consistent font size */
+}
+
+button:hover {
+  opacity: 0.9; /* Add slight hover effect */
+}
+
+button.submit-button {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: 1px solid #007bff;
+  border-radius: 10px;
+}
+
+button.submit-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3; /* Match border with background */
+}
+
+button.delete {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  margin-right: 1rem;
+  border: 1px solid #ff0000;
+}
+
+button.delete:hover {
+  background-color: #c82333;
+  color: white;
+}
+
+button.edit {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  margin-right: 1rem;
+  border: 1px solid #04AA6D;
+}
+
+button.edit:hover {
+  background-color: #218838;
+  color: white;
+}
+
+.comments-list {
+  margin-top: 20px;
+}
+
 .back-button {
   position: relative;
   top: -10px;
@@ -263,4 +260,22 @@ button.edit:hover {
 
 .back-button:hover {
   background-color: #4b4b4b;
+}
+
+/* Centering navigation links in the collapsed state */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    text-align: center; /* Center the text */
+  }
+  
+  .navbar-nav {
+    margin: 0; /* Remove any margin */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center align items horizontally */
+  }
+
+  .nav-link {
+    padding: 10px; /* Adjust padding if needed */
+  }
 }
